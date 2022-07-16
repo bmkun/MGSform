@@ -8,14 +8,14 @@
 
     <div class="container">
         <p>Login to your Account</p>
-        <form action="/action_page.php">
+        <form actiogitn="/action_page.php" id="Form" onsubmit="return false">
             <label for="fname">Email Address</label>
-            <input type="email" id="fname" name="firstname" placeholder="email@example.com" required>
+            <input type="email" id="email" name="firstname" placeholder="email@example.org" required>
 
             <label for="lname">Password</label>
-            <input type="password" id="lname" name="lastname" placeholder="********" required>
+            <input type="password" id="password" name="lastname" placeholder="********" required>
 
-            <input type="submit" value="Login">
+            <input type="submit" value="Login" onclick="validation()">
         </form>
 
     </div>
@@ -28,26 +28,28 @@
 </body>
 <script>
 
+
+
     function validation() {
         let email = document.getElementById("email").value;
         let password = document.getElementById("password").value;
         // console.log(password.length)
         var length = password.length;
         if (length <= 8) {
-            console.log("password to short")
+            console.log("password to short");
         } else {
-            console.log(email + '-->' + password);
+            let formData = {
+                email: email,
+                password: password
+
+            }
+            console.log(formData);
         }
     }
+
 
 </script>
 
 
 
 </html>
-
-
-<!-- 
-    https://kursuswebdesign.org/mengambil-nilai-inputan-dengan-value-di-javascript/
-    https://www.youtube.com/watch?v=c3qWHnJJbSY
- -->
