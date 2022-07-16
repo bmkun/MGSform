@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="css/form.css">
+
+<body>
+
+
+
+    <div class="container">
+        <p>Login to your Account</p>
+        <form action="/action_page.php">
+            <label for="fname">Email Address</label>
+            <input type="email" id="fname" name="firstname" placeholder="email@example.com" required>
+
+            <label for="lname">Password</label>
+            <input type="password" id="lname" name="lastname" placeholder="********" required>
+
+            <input type="submit" value="Login">
+        </form>
+
+    </div>
+    <div class="tbottom">
+        <p>Don't have an account ? <a href="register.html">Register</a></p>
+        <p>Forgotten your password? <a href="#">Recover Password</a></p>
+    </div>
+
+
+</body>
+<script>
+
+    function validation() {
+        let email = document.getElementById("email").value;
+        let password = document.getElementById("password").value;
+        // console.log(password.length)
+        var length = password.length;
+        if (length <= 8) {
+            console.log("password to short")
+        } else {
+            console.log(email + '-->' + password);
+        }
+    }
+
+</script>
+
+
+
+</html>
+
+
+<!-- 
+    https://kursuswebdesign.org/mengambil-nilai-inputan-dengan-value-di-javascript/
+    https://www.youtube.com/watch?v=c3qWHnJJbSY
+ -->
